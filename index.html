@@ -7,7 +7,7 @@
   <meta name="description" content="LinguaForge 官方下载：Apple Silicon Metal 加速的纯离线英汉翻译与英语精读工作台，Hy-MT3-7B + ECDICT 340 万词 + 专业术语库 + AI 精讲 + FSRS 生词本。">
   <meta name="theme-color" content="#f2f2f7">
   <meta property="og:title" content="LinguaForge · 纯离线英汉翻译与英语精读">
-  <meta property="og:description" content="下载 Android 客户端，或在你自己的 Mac 上部署本地翻译引擎。">
+  <meta property="og:description" content="下载 Android 客户端，连接你自己的 LinguaForge 离线翻译与英语精读服务。">
   <meta property="og:type" content="website">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%231a73e8'/%3E%3Ctext x='32' y='43' font-family='-apple-system,Arial,sans-serif' font-size='25' font-weight='800' fill='white' text-anchor='middle'%3ELF%3C/text%3E%3C/svg%3E">
   <style>
@@ -158,21 +158,9 @@
       background: var(--panel); border: 1px solid var(--line); border-radius: 22px;
       box-shadow: var(--shadow); text-align: center;
     }
-    .os-tabs {
-      display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 3px;
-      max-width: 34rem; margin: 0 auto 1.15rem; padding: 4px;
-      background: var(--panel-3); border-radius: 13px;
-    }
-    .os-tab {
-      height: 38px; padding: 0 .3rem; border: 0; border-radius: 9px;
-      background: transparent; color: var(--muted); font: inherit; font-size: .82rem; font-weight: 650;
-      white-space: nowrap; cursor: pointer; transition: background .15s, color .15s, box-shadow .15s;
-    }
-    .os-tab.active { background: var(--panel); color: var(--ink); box-shadow: 0 1px 4px rgba(15, 23, 42, .12); }
     .os-panel { display: none; }
     .os-panel.active { display: block; animation: fade .18s ease-out; }
     @keyframes fade { from { opacity: 0; transform: translateY(3px); } to { opacity: 1; transform: none; } }
-    .panel-title { font-size: .98rem; font-weight: 700; margin-bottom: .35rem; }
     .btn-primary {
       display: flex; align-items: center; justify-content: center; width: min(100%, 30rem); height: 52px;
       margin: 0 auto; padding: 0 1.25rem; border: 0; border-radius: 14px;
@@ -192,20 +180,6 @@
     .progress-bar-bg { width: 100%; height: 8px; background: var(--panel-3); border-radius: 999px; overflow: hidden; }
     .progress-bar-fill { width: 0%; height: 100%; background: linear-gradient(90deg, var(--blue), #06b6d4); transition: width .15s linear; }
     .progress-text { margin-top: .35rem; font-size: .8rem; color: var(--muted); font-variant-numeric: tabular-nums; }
-
-    .code-box { margin: .8rem auto 0; max-width: 38rem; text-align: left; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--panel-2); }
-    .code-head {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: .42rem .7rem; border-bottom: 1px solid var(--line);
-      color: var(--subtle); font-size: .72rem; font-weight: 650;
-    }
-    .copy-btn {
-      padding: .18rem .55rem; border: 1px solid var(--line); border-radius: 6px;
-      background: var(--panel); color: var(--muted); font: inherit; font-size: .7rem; cursor: pointer;
-    }
-    .copy-btn:hover { color: var(--blue-dark); border-color: var(--blue); }
-    pre { margin: 0; padding: .75rem .9rem; overflow-x: auto; font: .78rem/1.7 ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--ink); }
-    code { font-family: inherit; }
 
     .kpi-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .6rem; margin-top: 1.05rem; }
     .kpi { padding: .85rem .6rem; border: 1px solid var(--line); border-radius: 14px; background: var(--panel); text-align: center; box-shadow: var(--shadow-sm); }
@@ -270,7 +244,6 @@
       main { padding-left: .85rem; padding-right: .85rem; }
       .kpi-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .feat-grid { grid-template-columns: 1fr; }
-      .os-tab { font-size: .74rem; }
       th, td { padding: .52rem .45rem; font-size: .77rem; }
     }
   </style>
@@ -295,11 +268,11 @@
       <div class="eyebrow">
         <span class="pill" id="ver-pill">v1.1.0 · Build 2</span>
         <span class="pill green">纯离线</span>
-        <span class="pill gray">Apple Silicon Metal</span>
+        <span class="pill gray">本地 Metal 加速</span>
         <span id="date-pill">2026-11-26</span>
       </div>
       <h1>LinguaForge</h1>
-      <p class="hero-sub">一个跑在你自己 Mac 上的纯离线英汉翻译与英语精读工作台：7B 本地模型、340 万词离线词典、专业术语库、AI 精讲与 FSRS 生词本，数据不离开本机。</p>
+      <p class="hero-sub">一个纯离线英汉翻译与英语精读工作台：7B 本地模型、340 万词离线词典、专业术语库、AI 精讲与 FSRS 生词本，数据不离开你的本机。</p>
       <div class="hero-points">
         <span class="point"><b>Hy-MT3 7B</b> Metal 全层加速</span>
         <span class="point"><b>270+</b> 专业术语</span>
@@ -328,45 +301,14 @@
   </section>
 
   <section class="dl-box" id="download" style="border-top:1px solid var(--line);padding-top:1.15rem;margin-top:1.35rem" aria-label="下载">
-    <div class="os-tabs" role="tablist" aria-label="选择使用方式">
-      <button type="button" class="os-tab active" data-os="android" role="tab" aria-selected="true">Android 客户端</button>
-      <button type="button" class="os-tab" data-os="macos" role="tab" aria-selected="false">macOS 本地引擎</button>
-      <button type="button" class="os-tab" data-os="pwa" role="tab" aria-selected="false">手机 PWA</button>
-    </div>
-
     <div class="os-panel active" id="panel-android">
       <button type="button" class="btn-primary" id="turbo-btn">立即下载 Android 客户端</button>
-      <p class="os-meta"><span id="apk-ver-meta">v1.1.0</span> (Build <span id="apk-build-meta">2</span>) · <span id="apk-size">33 KB</span> · Android 8.0+ · 轻量 WebView 客户端，模型与词典全部在 Mac 上运行</p>
+      <p class="os-meta"><span id="apk-ver-meta">v1.1.0</span> (Build <span id="apk-build-meta">2</span>) · <span id="apk-size">33 KB</span> · Android 8.0+ · 轻量客户端，连接你自己的 LinguaForge 服务</p>
       <div class="alt-links">
         <a id="link-github" href="https://github.com/xzqttt/lingua-forge-release/releases/latest" target="_blank" rel="noopener">GitHub Release</a>
         <a id="link-ghfast" href="https://github.com/xzqttt/lingua-forge-release/releases/latest" target="_blank" rel="noopener">ghfast 镜像</a>
         <a id="link-ghproxy" href="https://github.com/xzqttt/lingua-forge-release/releases/latest" target="_blank" rel="noopener">gh-proxy 镜像</a>
       </div>
-    </div>
-
-    <div class="os-panel" id="panel-macos">
-      <p class="panel-title">macOS 端是本地自建服务，不提供安装包</p>
-      <p class="os-meta">需要 Apple Silicon Mac、Python 3.11+ 与 llama.cpp。源码仓库当前为私有，需维护者授权访问。</p>
-      <div class="code-box">
-        <div class="code-head"><span>终端命令</span><button class="copy-btn" data-copy-target="mac-cmds" type="button">复制</button></div>
-        <pre id="mac-cmds"><code>git clone &lt;私有仓库地址&gt; lingua-forge
-cd lingua-forge
-python3 -m venv .venv
-.venv/bin/pip install -e .
-.venv/bin/python scripts/download_assets.py
-./scripts/lingua-ctl.sh start</code></pre>
-      </div>
-      <p class="os-meta">首次启动会下载约 4.9 GB 的 Hy-MT3-7B 模型与 812 MB 的 ECDICT 词库；之后即可完全离线使用。</p>
-    </div>
-
-    <div class="os-panel" id="panel-pwa">
-      <p class="panel-title">已有一个正在运行的 LinguaForge 服务？</p>
-      <p class="os-meta">无需安装客户端：在手机浏览器打开服务地址，加入主屏幕即可获得接近原生 App 的 PWA 体验，支持系统 TTS、深色模式与 FSRS 复习。</p>
-      <div class="code-box">
-        <div class="code-head"><span>局域网地址</span><button class="copy-btn" data-copy-target="pwa-cmds" type="button">复制</button></div>
-        <pre id="pwa-cmds"><code>http://&lt;你的 Mac 局域网 IP&gt;:8765</code></pre>
-      </div>
-      <p class="os-meta">公网访问需配置 Cloudflare 命名隧道与访问口令，详见仓库 README。</p>
     </div>
 
     <div class="progress-wrap" id="progress-wrap">
@@ -430,11 +372,11 @@ python3 -m venv .venv
   </section>
 
   <section id="install" aria-labelledby="install-h">
-    <div class="section-head"><h2 id="install-h">📲 Android 三步启用</h2><span class="lead">APK 仅 33 KB，是连接你自己 Mac 的轻量客户端</span></div>
+    <div class="section-head"><h2 id="install-h">📲 Android 三步启用</h2><span class="lead">APK 仅 33 KB，连接你自己的 LinguaForge 服务</span></div>
     <ol class="steps">
       <li><strong>下载并安装 APK。</strong>首次安装需在系统设置中允许「未知来源」安装；旧版可直接覆盖升级。</li>
-      <li><strong>在 Mac 上启动服务。</strong>运行 <code>./scripts/lingua-ctl.sh start</code>，确认 <code>/api/health</code> 中 Hy-MT3 与 ECDICT 均为在线。</li>
-      <li><strong>打开客户端并配置连接。</strong>右上角 <strong>⚙ 设置</strong> 可切换「公网加密通道 / 局域网极速」并填写访问口令；之后在任意 App 选中文本，通过分享或划词即可直达翻译。</li>
+      <li><strong>打开客户端并配置连接。</strong>点右上角 <strong>⚙ 设置</strong>，填写服务地址与访问口令；可在「公网加密通道 / 局域网极速」之间切换。</li>
+      <li><strong>开始使用。</strong>在任意 App 选中文本，通过系统分享或划词即可直达翻译、查词与生词本。</li>
     </ol>
     <p class="sha-line"><span id="sha-label">Android APK</span> SHA-256：<code id="apk-sha">加载校验码…</code></p>
   </section>
@@ -442,11 +384,10 @@ python3 -m venv .venv
   <section id="faq" aria-labelledby="faq-h">
     <div class="section-head"><h2 id="faq-h">❓ 常见问题</h2></div>
     <div class="faq">
-      <details><summary>为什么 APK 只有 33 KB？</summary><p>它是原生 WebView 客户端，只包含界面壳、系统 TTS、剪贴板与分享桥接。翻译模型（4.9 GB）、词库（812 MB）和生词数据都在你的 Mac 上，手机端不重复占用空间。</p></details>
-      <details><summary>需要联网吗？翻译会不会上传到云端？</summary><p>翻译、词典、术语匹配和生词本全部在 Mac 本机离线运行，不会上传到第三方云服务。手机只是通过局域网或你自己的 Cloudflare 隧道访问这台 Mac，因此手机和 Mac 之间需要网络可达。</p></details>
-      <details><summary>访问口令是做什么的？公开版 APK 里带口令吗？</summary><p>口令用于保护你的公网隧道，防止陌生人调用本机模型。公开下载的 APK <strong>不会内嵌任何访问口令</strong>，发版脚本还会主动检测并阻止含口令的包；首次使用请在 ⚙ 设置中填写你自己的地址与口令。</p></details>
-      <details><summary>生词和翻译记录存在哪里？</summary><p>全部保存在 Mac 本机的 SQLite 数据库 <code>data/lingua_forge.db</code>（WAL 模式）。你可以直接备份这个文件，或从生词本导出 Obsidian Markdown / Anki TSV。</p></details>
-      <details><summary>iPhone / iPad 能用吗？</summary><p>目前没有原生 iOS 客户端。可以在 Safari 中打开你的 LinguaForge 服务地址，并「添加到主屏幕」作为 PWA 使用；系统 TTS、深色模式和 FSRS 复习都可正常使用。</p></details>
+      <details><summary>为什么 APK 只有 33 KB？</summary><p>它是原生 WebView 客户端，只包含界面壳、系统 TTS、剪贴板与分享桥接。翻译模型（4.9 GB）、词库（812 MB）和生词数据都在 LinguaForge 服务端，手机端不重复占用空间。</p></details>
+      <details><summary>需要联网吗？翻译会不会上传到云端？</summary><p>翻译、词典、术语匹配和生词本全部在服务端本机离线运行，不会上传到第三方云服务。手机需要能够访问该服务（局域网或你自己的隧道），因此手机与服务端之间需要网络可达。</p></details>
+      <details><summary>访问口令是做什么的？公开版 APK 里带口令吗？</summary><p>口令用于保护你的公网隧道，防止陌生人调用服务端模型。公开下载的 APK <strong>不会内嵌任何访问口令</strong>，发版脚本还会主动检测并阻止含口令的包；首次使用请在 ⚙ 设置中填写你自己的地址与口令。</p></details>
+      <details><summary>生词和翻译记录存在哪里？</summary><p>全部保存在服务端本机的 SQLite 数据库 <code>data/lingua_forge.db</code>（WAL 模式）。你可以直接备份这个文件，或从生词本导出 Obsidian Markdown / Anki TSV。</p></details>
     </div>
   </section>
 
@@ -465,14 +406,12 @@ python3 -m venv .venv
 
   var RELEASE_PAGE = 'https://github.com/xzqttt/lingua-forge-release/releases/latest';
   var manifestData = null;
-  var currentOs = 'android';
   var fallbackUrl = RELEASE_PAGE;
 
   var turboBtn = document.getElementById('turbo-btn');
   var progressWrap = document.getElementById('progress-wrap');
   var progressFill = document.getElementById('progress-fill');
   var progressText = document.getElementById('progress-text');
-  var shaLabel = document.getElementById('sha-label');
   var shaCode = document.getElementById('apk-sha');
 
   function formatSize(bytes) {
@@ -486,13 +425,8 @@ python3 -m venv .venv
     return manifestData && manifestData.apk ? manifestData.apk : null;
   }
 
-  function updateShaDisplay(os) {
+  function updateShaDisplay() {
     if (!shaCode) return;
-    shaLabel.textContent = os === 'android' ? 'Android APK' : '安装包';
-    if (os !== 'android') {
-      shaCode.textContent = 'macOS / PWA 为本地自建方式，无安装包校验码';
-      return;
-    }
     var pkg = apkInfo();
     shaCode.textContent = pkg && pkg.sha256 ? pkg.sha256 : '加载校验码…';
   }
@@ -526,7 +460,7 @@ python3 -m venv .venv
       if (gh && pkg.github_url) gh.href = pkg.github_url;
       if (fast && pkg.mirror_ghfast) fast.href = pkg.mirror_ghfast;
       if (proxy && pkg.mirror_ghproxy) proxy.href = pkg.mirror_ghproxy;
-      updateShaDisplay(currentOs);
+      updateShaDisplay();
     })
     .catch(function () {});
 
@@ -648,47 +582,6 @@ python3 -m venv .venv
 
   turboBtn.addEventListener('click', function () {
     startTurboDownload(apkInfo(), turboBtn);
-  });
-
-  var osTabs = Array.from(document.querySelectorAll('.os-tab'));
-  var osPanels = Array.from(document.querySelectorAll('.os-panel'));
-
-  function selectOs(os) {
-    currentOs = os;
-    osTabs.forEach(function (t) {
-      var active = t.dataset.os === os;
-      t.classList.toggle('active', active);
-      t.setAttribute('aria-selected', active ? 'true' : 'false');
-    });
-    osPanels.forEach(function (p) {
-      p.classList.toggle('active', p.id === 'panel-' + os);
-    });
-    updateShaDisplay(os);
-  }
-
-  osTabs.forEach(function (t) {
-    t.addEventListener('click', function () { selectOs(t.dataset.os); });
-  });
-
-  var ua = navigator.userAgent || '';
-  if (/Android/i.test(ua)) selectOs('android');
-  else if (/Macintosh|Mac OS X/i.test(ua)) selectOs('macos');
-  else if (/iPhone|iPad|iPod/i.test(ua)) selectOs('pwa');
-  else selectOs('android');
-
-  document.querySelectorAll('.copy-btn').forEach(function (btn) {
-    btn.addEventListener('click', async function () {
-      var target = document.getElementById(btn.dataset.copyTarget);
-      if (!target) return;
-      try {
-        await navigator.clipboard.writeText(target.innerText);
-        var old = btn.textContent;
-        btn.textContent = '已复制';
-        setTimeout(function () { btn.textContent = old; }, 1600);
-      } catch (e) {
-        btn.textContent = '请手动复制';
-      }
-    });
   });
 })();
 </script>
