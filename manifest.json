@@ -1,0 +1,33 @@
+{
+  "name": "LinguaForge",
+  "version": "1.1.0",
+  "version_code": 2,
+  "updated_at": "2026-11-26 09:36:20 +0800",
+  "site_url": "https://xzqttt.github.io/lingua-forge-release/",
+  "apk": {
+    "filename": "LinguaForge-1.1.0.apk",
+    "asset_name": "lingua-forge-1.1.0.apk",
+    "bytes": 33601,
+    "mib": 0.03,
+    "kb": 32.8,
+    "sha256": "5e91cf833b0f84b89211be0879a800d29791bf0cefb5ffe885cf838723e7aaf6",
+    "tos_url": "",
+    "tos_cdn": true,
+    "github_url": "https://github.com/xzqttt/lingua-forge-release/releases/download/v1.1.0/lingua-forge-1.1.0.apk",
+    "mirror_ghfast": "https://ghfast.top/https://github.com/xzqttt/lingua-forge-release/releases/download/v1.1.0/lingua-forge-1.1.0.apk",
+    "mirror_ghproxy": "https://gh-proxy.com/https://github.com/xzqttt/lingua-forge-release/releases/download/v1.1.0/lingua-forge-1.1.0.apk",
+    "chunks": [
+      {
+        "path": "https://ark-auto-2102112654-cn-beijing-default.tos-cn-beijing.volces.com/lingua-forge/releases/v1.1.0/part-00.bin",
+        "bytes": 33601,
+        "sha256": "5e91cf833b0f84b89211be0879a800d29791bf0cefb5ffe885cf838723e7aaf6"
+      }
+    ]
+  },
+  "platforms": {},
+  "source": {
+    "repo_url": "https://github.com/xzqttt/lingua-forge",
+    "private": true,
+    "note": "macOS 端为本地自建服务，源码仓库需维护者授权访问。"
+  }
+}
