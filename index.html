@@ -319,9 +319,9 @@
 
 
   <div class="kpi-grid" aria-label="核心实测指标">
-    <div class="kpi"><div class="kpi-val">100%</div><div class="kpi-label">术语命中率</div><div class="kpi-sub">12 句黄金集</div></div>
-    <div class="kpi"><div class="kpi-val">63.5</div><div class="kpi-label">加权 chrF++</div><div class="kpi-sub">较裸跑 +13.6</div></div>
-    <div class="kpi"><div class="kpi-val">100%</div><div class="kpi-label">代码 / URL 保留</div><div class="kpi-sub">占位保护零丢失</div></div>
+    <div class="kpi"><div class="kpi-val">97.3%</div><div class="kpi-label">注入术语合规</div><div class="kpi-sub">100 句扩展集</div></div>
+    <div class="kpi"><div class="kpi-val">60.65</div><div class="kpi-label">加权 chrF++</div><div class="kpi-sub">100 句扩展集</div></div>
+    <div class="kpi"><div class="kpi-val">100%</div><div class="kpi-label">代码 / URL 保留</div><div class="kpi-sub">结构校验通过</div></div>
     <div class="kpi"><div class="kpi-val">340 万</div><div class="kpi-label">离线词条</div><div class="kpi-sub">毫秒级查词</div></div>
   </div>
 
@@ -352,12 +352,12 @@
       <div class="feat"><div class="feat-icon">🎯</div><strong>专业术语库</strong><span>AI / 软件工程 / 教育 / 前沿科技 270+ 术语，最长优先双向注入，支持增删改与 TSV 导入。</span></div>
       <div class="feat"><div class="feat-icon">🧑‍🏫</div><strong>AI 精读教练</strong><span>句法骨架、核心词块、地道润色与微练习；本地模型自动容灾，必要时商业模型兜底。</span></div>
       <div class="feat"><div class="feat-icon">🗂️</div><strong>FSRS 生词本</strong><span>自研 FSRS 调度、四档评分、语境例句、Obsidian Markdown / Anki TSV 一键导出。</span></div>
-      <div class="feat"><div class="feat-icon">📈</div><strong>评测与微调闭环</strong><span>12 句黄金集对比 BLEU / chrF++ / 术语命中 / 耗时；人工精校样本可导出 MLX LoRA 训练集。</span></div>
+      <div class="feat"><div class="feat-icon">📈</div><strong>评测与微调闭环</strong><span>100 句黄金集对比 BLEU / chrF++ / TER / ROUGE-L / 结构 / 术语；人工精校样本可导出 MLX LoRA 与 DPO 偏好集。</span></div>
     </div>
   </section>
 
   <section id="benchmark" aria-labelledby="benchmark-h">
-    <div class="section-head"><h2 id="benchmark-h">📊 黄金集实测</h2><span class="lead">12 句 · AI / 软件工程 / 教育 / 科技 · 双向翻译</span></div>
+    <div class="section-head"><h2 id="benchmark-h">📊 黄金集实测</h2><span class="lead">12 句四引擎对比 · 100 句扩展集验证</span></div>
     <div class="table-wrap">
       <table>
         <thead><tr><th>引擎</th><th>加权 chrF++</th><th>加权 BLEU</th><th>术语命中</th><th>代码/URL 保留</th><th>平均耗时</th></tr></thead>
@@ -369,7 +369,7 @@
         </tbody>
       </table>
     </div>
-    <p class="table-note">数据来自仓库内 <code>eval/latest_report.md</code>。术语表把 7B 主力的 chrF++ 从 49.87 提升到 63.5，术语命中率从 59% 提升到 100%，同时保持代码 / URL 零丢失。</p>
+    <p class="table-note">数据来自仓库内 <code>eval/latest_report.md</code>。12 句四引擎对比中，术语表把 7B 主力的 chrF++ 从 49.87 提升到 63.5；100 句扩展集（60 EN→ZH / 40 ZH→EN）上，Hy-MT3 + 术语表 chrF++ 60.65、TER 31.31、ROUGE-L 0.76、注入术语合规 97.3%，结构 / 段落 / 代码 URL 保留率均为 100%。</p>
   </section>
 
   <section id="install" aria-labelledby="install-h">
