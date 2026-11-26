@@ -266,7 +266,7 @@
   <section class="dl-box" id="download" style="border-top:0;padding-top:0;margin-top:.8rem" aria-label="下载">
     <div class="os-panel active" id="panel-android">
       <button type="button" class="btn-primary" id="turbo-btn">立即下载 Android 客户端</button>
-      <p class="os-meta"><span id="apk-ver-meta">v1.2.0</span> (Build <span id="apk-build-meta">4</span>) · <span id="apk-size">9.0 MB</span> · Android 8.0+ · arm64 客户端：可连接服务端，也可下载模型后<strong>断网离线翻译</strong></p>
+      <p class="os-meta"><span id="apk-ver-meta">v1.2.1</span> (Build <span id="apk-build-meta">5</span>) · <span id="apk-size">9.0 MB</span> · Android 8.0+ · arm64 客户端：可连接服务端，也可下载模型后<strong>断网离线翻译</strong></p>
       <div class="alt-links">
         <a id="link-github" href="https://github.com/xzqttt/lingua-forge-release/releases/latest" target="_blank" rel="noopener">GitHub Release</a>
         <a id="link-ghfast" href="https://github.com/xzqttt/lingua-forge-release/releases/latest" target="_blank" rel="noopener">ghfast 镜像</a>
@@ -283,7 +283,7 @@
   <section class="hero" style="border:0;padding:0;margin:0">
     <div class="hero-copy">
       <div class="eyebrow">
-        <span class="pill" id="ver-pill">v1.2.0 · Build 4</span>
+        <span class="pill" id="ver-pill">v1.2.1 · Build 5</span>
         <span class="pill green">纯离线</span>
         <span class="pill gray">本地 Metal 加速</span>
         <span id="date-pill">2026-11-26</span>
@@ -328,6 +328,14 @@
   <section aria-labelledby="changes">
     <div class="section-head"><h2 id="changes">✨ 最近更新</h2><a href="https://github.com/xzqttt/lingua-forge-release/releases" target="_blank" rel="noopener" class="lead">查看发布记录 →</a></div>
     <div class="ver-group">
+      <div class="ver-head"><span class="pill">v1.2.1 · Build 5</span><span class="ver-time">2026-11-26 15:30</span><span class="ver-title">端侧模型瘦身 22%：从 1.08 GB 降到 846 MB</span></div>
+      <div class="log-list">
+        <div class="log-item"><strong>量化方案对比实测：</strong>用同一套 100 句黄金集对比 Q4_K_M / Q3_K_M / IQ3_XXS / IQ2_M / Q2_K，最终选用 Q3_K_M + Q4 词嵌入：846 MB（−22%），chrF++ 55.65（−2.8%），TER 36.31、结构通过 100%、代码/URL 保留 100%、术语命中 89.4%。</div>
+        <div class="log-item"><strong>不再二次量化：</strong>从原始 bf16 权重重新转换为 GGUF 后量化，并用自有语料计算 imatrix；此前从 Q4 直接降位会导致 chrF 从 53 掉到 41。</div>
+        <div class="log-item"><strong>下载与存储优化：</strong>模型文件名统一为 lingua-ondevice-model.gguf，设置页与文案同步为「约 0.85 GB」。</div>
+      </div>
+    </div>
+    <div class="ver-group">
       <div class="ver-head"><span class="pill">v1.2.0 · Build 4</span><span class="ver-time">2026-11-26 14:35</span><span class="ver-title">端侧离线翻译：手机本地跑 Hy-MT2-1.8B，断网可用</span></div>
       <div class="log-list">
         <div class="log-item"><strong>手机本地推理：</strong>内置 llama.cpp（arm64-v8a）+ Hy-MT2-1.8B Q4_K_M（1.08 GB），JNI 直连 C++ 引擎；不需要电脑、不上传文本。100 句黄金集 chrF++ 57.27，约为 7B 主力的 94%，速度约 2.2 倍。</div>
@@ -364,7 +372,7 @@
   <section id="features" aria-labelledby="features-h">
     <div class="section-head"><h2 id="features-h">🧩 核心能力</h2><span class="lead">全部在本机完成，不经过云端</span></div>
     <div class="feat-grid">
-      <div class="feat"><div class="feat-icon">📱</div><strong>端侧离线翻译</strong><span>Hy-MT2-1.8B + llama.cpp 在手机本地运行，模型按需下载，断网也能翻译，文本不离开设备。</span></div>
+      <div class="feat"><div class="feat-icon">📱</div><strong>端侧离线翻译</strong><span>Hy-MT2-1.8B 轻量版（846 MB）+ llama.cpp 在手机本地运行，模型按需下载，断网也能翻译，文本不离开设备。</span></div>
       <div class="feat"><div class="feat-icon">🧠</div><strong>离线 7B 主翻译</strong><span>Hy-MT3-7B Q4_K_M + llama.cpp Metal 全层卸载，官方提示词模板，长文自动分段。</span></div>
       <div class="feat"><div class="feat-icon">📚</div><strong>340 万词离线词典</strong><span>ECDICT 1.0.28：IPA、柯林斯星级、牛津 3000、考试标签、词形还原与中文反查。</span></div>
       <div class="feat"><div class="feat-icon">🎯</div><strong>专业术语库</strong><span>AI / 软件工程 / 教育 / 前沿科技 270+ 术语，最长优先双向注入，支持增删改与 TSV 导入。</span></div>
