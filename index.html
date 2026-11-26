@@ -266,7 +266,7 @@
   <section class="dl-box" id="download" style="border-top:0;padding-top:0;margin-top:.8rem" aria-label="下载">
     <div class="os-panel active" id="panel-android">
       <button type="button" class="btn-primary" id="turbo-btn">立即下载 Android 客户端</button>
-      <p class="os-meta"><span id="apk-ver-meta">v1.1.0</span> (Build <span id="apk-build-meta">2</span>) · <span id="apk-size">33 KB</span> · Android 8.0+ · 轻量客户端，连接你自己的 LinguaForge 服务</p>
+      <p class="os-meta"><span id="apk-ver-meta">v1.1.1</span> (Build <span id="apk-build-meta">3</span>) · <span id="apk-size">33 KB</span> · Android 8.0+ · 轻量客户端，连接你自己的 LinguaForge 服务</p>
       <div class="alt-links">
         <a id="link-github" href="https://github.com/xzqttt/lingua-forge-release/releases/latest" target="_blank" rel="noopener">GitHub Release</a>
         <a id="link-ghfast" href="https://github.com/xzqttt/lingua-forge-release/releases/latest" target="_blank" rel="noopener">ghfast 镜像</a>
@@ -283,7 +283,7 @@
   <section class="hero" style="border:0;padding:0;margin:0">
     <div class="hero-copy">
       <div class="eyebrow">
-        <span class="pill" id="ver-pill">v1.1.0 · Build 2</span>
+        <span class="pill" id="ver-pill">v1.1.1 · Build 3</span>
         <span class="pill green">纯离线</span>
         <span class="pill gray">本地 Metal 加速</span>
         <span id="date-pill">2026-11-26</span>
@@ -328,7 +328,15 @@
   <section aria-labelledby="changes">
     <div class="section-head"><h2 id="changes">✨ 最近更新</h2><a href="https://github.com/xzqttt/lingua-forge-release/releases" target="_blank" rel="noopener" class="lead">查看发布记录 →</a></div>
     <div class="ver-group">
-      <div class="ver-head"><span class="pill">v1.1.0 · Build 2</span><span class="ver-time">2026-11-26 09:13</span><span class="ver-title">AI 精讲三引擎自动容灾 &amp; 移动端体验重构</span></div>
+      <div class="ver-head"><span class="pill">v1.1.1 · Build 3</span><span class="ver-time">2026-11-26 12:20</span><span class="ver-title">客户端版本信息 &amp; 缓存刷新 &amp; 服务端质量校验</span></div>
+      <div class="log-list">
+        <div class="log-item"><strong>设置页显示客户端版本：</strong>连接设置中新增「客户端 v1.1.1 (Build 3)」，并说明翻译 / 词典由服务端提供。</div>
+        <div class="log-item"><strong>清除缓存并重载：</strong>设置页新增按钮，保存当前地址 / 口令后清理 WebView 缓存与 Cookie 并重载，解决服务端 UI 更新在客户端不可见的问题。</div>
+        <div class="log-item"><strong>服务端同步：</strong>结构校验与术语合规结果、More → 评测与微调中的「导出 DPO 偏好集」入口随服务器更新；100 句扩展集评测已上线。</div>
+      </div>
+    </div>
+    <div class="ver-group">
+      <div class="ver-head"><span class="pill gray">v1.1.0 · Build 2</span><span class="ver-time">2026-11-26 09:13</span><span class="ver-title">AI 精讲三引擎自动容灾 &amp; 移动端体验重构</span></div>
       <div class="log-list">
         <div class="log-item"><strong>AI 精讲自动容灾：</strong>教练引擎按 <code>18082 → 18084 → DeepSeek</code> 顺序自动探测可用模型，优先使用本地 <code>active</code> 权重；本地全离线时才启用商业兜底，翻译对比不会重复调用商业模型。</div>
         <div class="log-item"><strong>移动优先 UI 重构：</strong>参考 Apple / Google 翻译的工作台布局，新增深色模式、底部导航、点词即查、术语命中标签与轻量历史回放。</div>
