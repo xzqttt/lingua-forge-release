@@ -319,8 +319,8 @@
 
 
   <div class="kpi-grid" aria-label="核心实测指标">
-    <div class="kpi"><div class="kpi-val">97.3%</div><div class="kpi-label">注入术语合规</div><div class="kpi-sub">100 句扩展集</div></div>
-    <div class="kpi"><div class="kpi-val">60.12</div><div class="kpi-label">加权 chrF++</div><div class="kpi-sub">100 句扩展集</div></div>
+    <div class="kpi"><div class="kpi-val">95.0%</div><div class="kpi-label">期望术语命中</div><div class="kpi-sub">100 句扩展集</div></div>
+    <div class="kpi"><div class="kpi-val">61.06</div><div class="kpi-label">加权 chrF++</div><div class="kpi-sub">100 句扩展集</div></div>
     <div class="kpi"><div class="kpi-val">100%</div><div class="kpi-label">代码 / URL 保留</div><div class="kpi-sub">结构校验通过</div></div>
     <div class="kpi"><div class="kpi-val">340 万</div><div class="kpi-label">离线词条</div><div class="kpi-sub">毫秒级查词</div></div>
   </div>
@@ -333,6 +333,7 @@
         <div class="log-item"><strong>量化方案对比实测：</strong>用同一套 100 句黄金集对比 Q4_K_M / Q3_K_M / IQ3_XXS / IQ2_M / Q2_K，最终选用 Q3_K_M + Q4 词嵌入：846 MB（−22%），chrF++ 55.65（−2.8%），TER 36.31、结构通过 100%、代码/URL 保留 100%、术语命中 89.4%。</div>
         <div class="log-item"><strong>不再二次量化：</strong>从原始 bf16 权重重新转换为 GGUF 后量化，并用自有语料计算 imatrix；此前从 Q4 直接降位会导致 chrF 从 53 掉到 41。</div>
         <div class="log-item"><strong>下载与存储优化：</strong>模型文件名统一为 lingua-ondevice-model.gguf，设置页与文案同步为「约 0.85 GB」。</div>
+        <div class="log-item"><strong>服务端（无需更新客户端）：</strong>术语支持英文词形（caches / embeddings / KV-cache）；长文分块并发 + SSE 流式返回、可中途停止；评测改为 greedy 解码并新增回归门禁与方向分项。</div>
       </div>
     </div>
     <div class="ver-group">
@@ -395,7 +396,7 @@
         </tbody>
       </table>
     </div>
-    <p class="table-note">数据来自仓库内 <code>eval/latest_report.md</code>。12 句四引擎对比中，术语表把 7B 主力的 chrF++ 从 49.87 提升到 63.5；100 句扩展集（60 EN→ZH / 40 ZH→EN）上，Hy-MT3 + 术语表 chrF++ 60.12、TER 31.46、ROUGE-L 0.76、BERTScore 0.94、COMET 0.88、注入术语合规 97.3%，结构 / 段落 / 代码 URL 保留率均为 100%。</p>
+    <p class="table-note">数据来自仓库内 <code>eval/latest_report.md</code>。12 句四引擎对比中，术语表把 7B 主力的 chrF++ 从 49.87 提升到 63.5；100 句扩展集（60 EN→ZH / 40 ZH→EN）上，Hy-MT3 + 术语表 chrF++ 61.06、TER 30.79、ROUGE-L 0.77、BERTScore 0.94、COMET 0.88、期望术语命中 95.0%、注入术语合规 97.5%，结构 / 段落 / 代码 URL 保留率均为 100%。</p>
   </section>
 
   <section id="install" aria-labelledby="install-h">
