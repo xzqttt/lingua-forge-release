@@ -266,7 +266,7 @@
   <section class="dl-box" id="download" style="border-top:0;padding-top:0;margin-top:.8rem" aria-label="下载">
     <div class="os-panel active" id="panel-android">
       <button type="button" class="btn-primary" id="turbo-btn">立即下载 Android 客户端</button>
-      <p class="os-meta"><span id="apk-ver-meta">v1.2.1</span> (Build <span id="apk-build-meta">5</span>) · <span id="apk-size">9.0 MB</span> · Android 8.0+ · arm64 客户端：可连接服务端，也可下载模型后<strong>断网离线翻译</strong></p>
+      <p class="os-meta"><span id="apk-ver-meta">v1.2.2</span> (Build <span id="apk-build-meta">6</span>) · <span id="apk-size">9.0 MB</span> · Android 8.0+ · arm64 客户端：可连接服务端，也可下载模型后<strong>断网离线翻译</strong></p>
       <div class="alt-links">
         <a id="link-github" href="https://github.com/xzqttt/lingua-forge-release/releases/latest" target="_blank" rel="noopener">GitHub Release</a>
         <a id="link-ghfast" href="https://github.com/xzqttt/lingua-forge-release/releases/latest" target="_blank" rel="noopener">ghfast 镜像</a>
@@ -283,7 +283,7 @@
   <section class="hero" style="border:0;padding:0;margin:0">
     <div class="hero-copy">
       <div class="eyebrow">
-        <span class="pill" id="ver-pill">v1.2.1 · Build 5</span>
+        <span class="pill" id="ver-pill">v1.2.2 · Build 6</span>
         <span class="pill green">纯离线</span>
         <span class="pill gray">本地 Metal 加速</span>
         <span id="date-pill">2026-11-26</span>
@@ -327,6 +327,13 @@
 
   <section aria-labelledby="changes">
     <div class="section-head"><h2 id="changes">✨ 最近更新</h2><a href="https://github.com/xzqttt/lingua-forge-release/releases" target="_blank" rel="noopener" class="lead">查看发布记录 →</a></div>
+    <div class="ver-group">
+      <div class="ver-head"><span class="pill">v1.2.2 · Build 6</span><span class="ver-time">2026-11-28 09:45</span><span class="ver-title">应用内自动更新</span></div>
+      <div class="log-list">
+        <div class="log-item"><strong>自动更新：</strong>设置页新增「客户端自动更新」，每次进入自动检查官网 manifest；发现新版后按需下载、逐片与整包 SHA-256 校验，再由系统安装器提示安装（不会静默安装）。</div>
+        <div class="log-item"><strong>安全：</strong>只接受官网签名清单；下载文件放在应用私有目录并通过受限 content provider 授权安装。</div>
+      </div>
+    </div>
     <div class="ver-group">
       <div class="ver-head"><span class="pill">v1.2.1 · Build 5</span><span class="ver-time">2026-11-26 15:30</span><span class="ver-title">端侧模型瘦身 22%：从 1.08 GB 降到 846 MB</span></div>
       <div class="log-list">

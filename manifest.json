@@ -1,26 +1,26 @@
 {
   "name": "LinguaForge",
-  "version": "1.2.1",
-  "version_code": 5,
-  "updated_at": "2026-11-28 03:50:18 +0800",
+  "version": "1.2.2",
+  "version_code": 6,
+  "updated_at": "2026-11-28 09:43:42 +0800",
   "site_url": "https://xzqttt.github.io/lingua-forge-release/",
   "apk": {
-    "filename": "LinguaForge-1.2.1.apk",
-    "asset_name": "lingua-forge-1.2.1.apk",
+    "filename": "LinguaForge-1.2.2.apk",
+    "asset_name": "lingua-forge-1.2.2.apk",
     "bytes": 9385420,
     "mib": 8.95,
     "kb": 9165.4,
-    "sha256": "df36180b59c8c025fc4bcbfff19fd9999e551f6ed15579f9d0cd5e197fb16a05",
+    "sha256": "5c8f9123dd0139e8dfd4fbada2a5ad5ea4aa4b096f082a15b95e7ff0bbfd3ebb",
     "tos_url": "",
     "tos_cdn": true,
-    "github_url": "https://github.com/xzqttt/lingua-forge-release/releases/download/v1.2.1/lingua-forge-1.2.1.apk",
-    "mirror_ghfast": "https://ghfast.top/https://github.com/xzqttt/lingua-forge-release/releases/download/v1.2.1/lingua-forge-1.2.1.apk",
-    "mirror_ghproxy": "https://gh-proxy.com/https://github.com/xzqttt/lingua-forge-release/releases/download/v1.2.1/lingua-forge-1.2.1.apk",
+    "github_url": "https://github.com/xzqttt/lingua-forge-release/releases/download/v1.2.2/lingua-forge-1.2.2.apk",
+    "mirror_ghfast": "https://ghfast.top/https://github.com/xzqttt/lingua-forge-release/releases/download/v1.2.2/lingua-forge-1.2.2.apk",
+    "mirror_ghproxy": "https://gh-proxy.com/https://github.com/xzqttt/lingua-forge-release/releases/download/v1.2.2/lingua-forge-1.2.2.apk",
     "chunks": [
       {
-        "path": "https://ark-auto-2102112654-cn-beijing-default.tos-cn-beijing.volces.com/lingua-forge/releases/v1.2.1/part-00.bin",
+        "path": "https://ark-auto-2102112654-cn-beijing-default.tos-cn-beijing.volces.com/lingua-forge/releases/v1.2.2/part-00.bin",
         "bytes": 9385420,
-        "sha256": "df36180b59c8c025fc4bcbfff19fd9999e551f6ed15579f9d0cd5e197fb16a05"
+        "sha256": "5c8f9123dd0139e8dfd4fbada2a5ad5ea4aa4b096f082a15b95e7ff0bbfd3ebb"
       }
     ]
   },
